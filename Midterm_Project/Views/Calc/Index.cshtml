@@ -1,0 +1,111 @@
+﻿@model Midterm_Project.Models.calc
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <body>
+        <!--By John Patrick Haguimit SBIT3Q-->
+        <h1>Midterm Project</h1>
+
+        <!--start ng aking circle form-->
+        <h3>Area of Circle</h3>
+        <div class="row">
+            @using (Html.BeginForm("Index", "calc", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="no1">Area of Circle</label>
+                    <input type="text" class="form-control" id="no1" name="no1" value="@Model.no1" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="total">Total</label>
+                    <input type="text" class="form-control" id="total" name="total" value="@Model.total" />
+                </div>
+                <!--button para sa circle-->
+                <button type="submit" class="btn btn-info" id="circle" value="circle" name="calculate">Area of Circle</button>
+            }
+        </div>
+        <!--end ng aking circle form-->
+        <br />
+
+        <!--start ng akin triangle form-->
+        <h3>Area of Triangle</h3>
+        <div class="row">
+            @using (Html.BeginForm("Index", "calc", FormMethod.Post))
+            {
+
+                <div class="form-group">
+                    <label for="triangle1">Input Triangle Side 1</label>
+                    <input type="text" class="form-control" id="triangle1" name="triangle1" value="@Model.triangle1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="triangle2">Input Triangle Side 2</label>
+                    <input type="text" class="form-control" id="triangle2" name="triangle2" value="@Model.triangle2" />
+                </div>
+
+                <div class="form-group">
+                    <label for="triangleTotal">Triangle Total</label>
+                    <input type="text" class="form-control" id="triangleTotal" name="triangleTotal" value="@Model.triangleTotal" />
+                </div>
+                <!--button para sa triangle-->
+                <button type="submit" class="btn btn-info" id="triangle" value="triangle" name="calculate">Area of Triangle</button>
+            }
+        </div>
+        <!--end ng akin triangle form-->
+        <br />
+
+        <!--start ng akin square form-->
+        <h3>Area of Square</h3>
+        <div class="row">
+            @using (Html.BeginForm("Index", "calc", FormMethod.Post))
+            {
+
+                <div class="form-group">
+                    <label for="square1">Input Square Side 1</label>
+                    <input type="text" class="form-control" id="square1" name="square1" value="@Model.square1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="squareTotal">Square Total</label>
+                    <input type="text" class="form-control" id="squareTotal" name="squareTotal" value="@Model.squareTotal" />
+                </div>
+                <!--button para sa square-->
+                <button type="submit" class="btn btn-info" id="square" value="square" name="calculate">Area of Square</button>
+            }
+        </div>
+        <!--end ng akin square form-->
+        <br />
+
+        <!--start ng akin rectangle form-->
+        <h3>Area of Rectangle</h3>
+        <div class="row">
+            @using (Html.BeginForm("Index", "calc", FormMethod.Post))
+            {
+
+                <div class="form-group">
+                    <label for="triangle1">Input Rectangle Length</label>
+                    <input type="text" class="form-control" id="rectangle1" name="rectangle1" value="@Model.rectangle1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="rectangle2">Input Rectangle Breadth</label>
+                    <input type="text" class="form-control" id="rectangle2" name="rectangle2" value="@Model.rectangle2" />
+                </div>
+
+                <div class="form-group">
+                    <label for="rectangleTotal">Rectangle Total</label>
+                    <input type="text" class="form-control" id="rectangleTotal" name="rectangleTotal" value="@Model.rectangleTotal" />
+                </div>
+                <!--button para sa rectangle-->
+                <button type="submit" class="btn btn-info" id="rectangle" value="rectangle" name="calculate">Area of Rectangle</button>
+            }
+        </div>
+        <!--end ng akin rectangle form-->
+    </body>
+</head>
+</html>
+
